@@ -8,7 +8,10 @@ from joblib import dump, load
 import sklearn
 from sklearn.base import BaseEstimator, TransformerMixin
 from pandas._libs.tslibs.timestamps import Timestamp
-from fastcore.transform import Transform, ItemTransform, Pipeline
+
+# from fastcore.transform import Transform, ItemTransform, Pipeline
+from fasttransform import Transform, ItemTransform, Pipeline
+
 from fastai.data.transforms import Categorize
 from fastai.data.load import DataLoader
 from fastai.tabular.core import df_shrink_dtypes, make_date
@@ -969,7 +972,8 @@ class TSPatchEncoder(Transform):
         return self.patch_encoder(o)
 
 # %% ../../nbs/009_data.preprocessing.ipynb 83
-from fastcore.transform import ItemTransform
+# from fastcore.transform import ItemTransform
+from fasttransform import Transform, ItemTransform, Pipeline
 
 class TSTuplePatchEncoder(ItemTransform):
     "Tansforms a time series with x and y into sequences of patches along the last dimension"

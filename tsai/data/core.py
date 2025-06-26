@@ -17,7 +17,10 @@ from types import MethodType
 from matplotlib.ticker import PercentFormatter
 import matplotlib.colors as mcolors
 from matplotlib import rcParams
-from fastcore.transform import Transform, DisplayedTransform, Pipeline
+
+# from fastcore.transform import Transform, DisplayedTransform, Pipeline
+from fasttransform import Transform, DisplayedTransform, Pipeline
+
 from fastai.data.transforms import (RandomSplitter, ItemGetter, MultiCategorize, CategoryMap,
 Category, MultiCategory, Categorize)
 from fastai.data.core import TfmdLists, Datasets, TfmdDL, DataLoaders
